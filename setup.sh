@@ -22,8 +22,7 @@ color_echo() {
 echo ""
 color_echo 33 "Updating git submodules..."
 
-git submodule init
-git submodule update --progress
+git submodule update --init --progress --remote --recursive
 
 echo ""
 color_echo 33 "Creating dotfile symlinks..."
