@@ -53,10 +53,12 @@ color_echo 33 "Creating dotfile symlinks..."
 color_echo 30 "==================================="
 
 for package in ${packages[@]}; do
+    echo ""
     if [ -d "$package" ]; then
-        echo ""
         echo -e "\033[1;33mLinking dotfiles for: \033[1;34m$package\033[0m"
         stow --verbose=2 --adopt --target=$HOME $package
+    else
+        echo -e "\033[1;31mDotfiles not found for: \033[1;34m$package\033[0m"
     fi
 done
 
