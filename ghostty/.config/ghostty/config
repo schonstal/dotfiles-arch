@@ -1,0 +1,8 @@
+clipboard-read = allow
+clipboard-write = allow
+copy-on-select = true
+background-opacity = 0.95
+font-family = JetBrainsMono Nerd Font
+font-size = 10
+window-padding-balance = true
+window-padding-color = extend
