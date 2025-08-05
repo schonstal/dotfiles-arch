@@ -20,15 +20,13 @@ color_echo() {
 }
 
 echo ""
-color_echo 33 "📥 Updating git submodules..."
-color_echo 30 "◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢"
+color_echo 33 "Updating git submodules..."
 
 git submodule init
 git submodule update --progress
 
 echo ""
-color_echo 33 "🔗 Creating dotfile symlinks..."
-color_echo 30 "◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢"
+color_echo 33 "Creating dotfile symlinks..."
 
 stow --verbose --adopt --target=$HOME .
 
