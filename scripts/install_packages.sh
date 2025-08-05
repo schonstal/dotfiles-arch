@@ -11,6 +11,8 @@ install_package() {
 }
 
 packages=(
+	git
+	stow
 	nvim
 	ghostty
 	tmux
