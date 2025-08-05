@@ -8,4 +8,5 @@
 ^/README.*
 ^/LICENSE
 
-install.sh
+setup.sh
+scripts
