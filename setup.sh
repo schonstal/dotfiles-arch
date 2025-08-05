@@ -28,7 +28,7 @@ git submodule update --progress
 echo ""
 color_echo 33 "Creating dotfile symlinks..."
 
-stow --verbose --adopt --target=$HOME .
+stow --verbose=2 --adopt --target=$HOME .
 
 echo ""
 color_echo 32 "Dotfile setup complete!"
