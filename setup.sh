@@ -24,10 +24,12 @@ done
 
 if [ "$install_packages" = true ]; then
     color_echo 33 "Ensuring packages are up to date..."
+    color_echo 30 "==================================="
     sudo pacman -Syy
 
     echo ""
     color_echo "Installing packages..."
+    color_echo 30 "==================================="
     for package in ${packages[@]}; do
         echo ""
         echo -e "\033[1;33mInstalling Package: \033[1;34m$package\033[0m"
@@ -42,11 +44,13 @@ fi
 
 echo ""
 color_echo 33 "Updating git submodules..."
+color_echo 30 "==================================="
 
 git submodule update --init --progress --remote --recursive
 
 echo ""
 color_echo 33 "Creating dotfile symlinks..."
+color_echo 30 "==================================="
 
 for package in ${packages[@]}; do
     if [ -d "$package" ]; then
