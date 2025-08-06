@@ -28,7 +28,7 @@ if [ "$install_packages" = true ]; then
     sudo pacman -Syy
 
     echo ""
-    color_echo "Installing packages..."
+    color_echo 33 "Installing packages..."
     color_echo 30 "==================================="
     for package in ${packages[@]}; do
         echo ""
