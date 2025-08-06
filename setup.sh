@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if [ $EUID = 0 ]; then
     echo "Do not run the script as root. Run it as the user that wants the dotfiles."
 fi
