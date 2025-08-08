@@ -5,13 +5,20 @@ if [ $EUID = 0 ]; then
 fi
 
 packages=(
-    git
-    stow
     nvim
     ghostty
     tmux
     fish
     yazi
+)
+
+dots_only=(
+    zmk
+)
+
+install_only=(
+    git
+    stow
 )
 
 color_echo() {
@@ -30,10 +37,12 @@ if [ "$install_packages" = true ]; then
     color_echo 30 "==================================="
     sudo pacman -Syy
 
+    to_install+=( "${packages[@]}" "${install_only[@]}" )
+
     echo ""
     color_echo 33 "Installing packages..."
     color_echo 30 "==================================="
-    for package in ${packages[@]}; do
+    for package in ${to_install[@]}; do
         echo ""
         echo -e "\033[1;33mInstalling Package: \033[1;34m$package\033[0m"
         sudo pacman -S $package
@@ -55,7 +64,9 @@ echo ""
 color_echo 33 "Creating dotfile symlinks..."
 color_echo 30 "==================================="
 
-for package in ${packages[@]}; do
+to_stow+=( "${dots_only[@]}" "${packages[@]}" )
+
+for package in ${to_stow[@]}; do
     echo ""
     if [ -d "$package" ]; then
         echo -e "\033[1;33mLinking dotfiles for: \033[1;34m$package\033[0m"
