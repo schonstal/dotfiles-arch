@@ -11,6 +11,7 @@ packages=(
     ghostty
     tmux
     fish
+    yazi
 )
 
 color_echo() {
