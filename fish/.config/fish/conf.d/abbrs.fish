@@ -11,4 +11,3 @@ abbr -a -- gd 'git diff'
 abbr -a -- g 'git status'
 abbr -a -- gp 'git push'
 abbr -a -- saveabbr 'abbr > ~/.config/fish/conf.d/abbrs.fish'
-abbr -a -- y yazi
