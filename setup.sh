@@ -8,16 +8,16 @@ packages=(
     nvim
     ghostty
     tmux
-    fish
     yazi
+    fastfetch
 )
 
 dots_only=(
     zmk
+    fish
 )
 
 install_only=(
-    git
     stow
 )
 
